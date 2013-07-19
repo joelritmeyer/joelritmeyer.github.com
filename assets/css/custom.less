@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 40px;
   background: #26a6c9; /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover,  #26a6c9 0%, #258dc8 100%); /* FF3.6+ */
@@ -41,15 +41,29 @@ body {
 }
 
 path {
+  .text-shadow;
   fill: #fff;
   stroke:#999;
   stroke-width:0.2;
   .transition;
   cursor: pointer;
+  font-size: 200%;
   &:hover{
     fill: #333;
   }
+  /*&:not(.africa) {
+    display: none;
+  }*/
 }
+
+
+  #africacontainer {
+    &:hover {
+      .africa {
+        fill: #333;
+      }
+    }
+  }
 
 svg {
   display: block;
@@ -59,6 +73,7 @@ svg {
   right:0;
   left:0;
   margin: auto;
+  font-size: 200%;
 }
 
 .mapcontainer {
@@ -90,7 +105,17 @@ svg {
   right: 0;
   left:0;
   margin:0 auto;
-  z-index: 1000;
+  z-index: 3;
+  display: none;
+  .animation-duration(0.1s);
+}
+
+.shield {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
   display: none;
 }
 
@@ -105,4 +130,25 @@ svg {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
   border-radius: @radius;
+}
+
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 1px, @alpha: 0.9) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+
+.text-shadow (@color: rgba(0, 0, 0, 0.4), @xPos: 1px, @yPos: 1px, @blur: 0px) {
+  -webkit-text-shadow: @xPos @yPos @blur @color;
+  -moz-text-shadow: @xPos @yPos @blur @color;
+  -ms-text-shadow: @xPos @yPos @blur @color;
+  -o-text-shadow: @xPos @yPos @blur @color;
+  text-shadow: @xPos @yPos @blur @color;
+}
+
+.animation-duration(@duration: 0.2s) {
+  -moz-animation-duration: @duration;
+  -webkit-animation-duration: @duration;
+  -o-animation-duration: @duration;
+  animation-duration: @duration;
 }

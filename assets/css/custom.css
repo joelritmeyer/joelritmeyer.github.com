@@ -6,7 +6,7 @@ body {
   height: 100%;
 }
 body {
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 40px;
   background: #26a6c9;
   /* Old browsers */
@@ -57,6 +57,11 @@ body {
   color: #f0f0f0;
 }
 path {
+  -webkit-text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+  -ms-text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+  -o-text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
   fill: #fff;
   stroke: #999;
   stroke-width: 0.2;
@@ -65,8 +70,16 @@ path {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   cursor: pointer;
+  font-size: 200%;
+  /*&:not(.africa) {
+    display: none;
+  }*/
+
 }
 path:hover {
+  fill: #333;
+}
+#africacontainer:hover .africa {
   fill: #333;
 }
 svg {
@@ -77,6 +90,7 @@ svg {
   right: 0;
   left: 0;
   margin: auto;
+  font-size: 200%;
 }
 .mapcontainer {
   margin: auto;
@@ -105,6 +119,18 @@ svg {
   right: 0;
   left: 0;
   margin: 0 auto;
-  z-index: 1000;
+  z-index: 3;
+  display: none;
+  -moz-animation-duration: 0.1s;
+  -webkit-animation-duration: 0.1s;
+  -o-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+}
+.shield {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
   display: none;
 }
