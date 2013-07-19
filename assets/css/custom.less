@@ -1,6 +1,22 @@
+@font-face {
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
   padding-top: 60px;
   padding-bottom: 40px;
+  background: #26a6c9; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #26a6c9 0%, #258dc8 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#26a6c9), color-stop(100%,#258dc8)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #26a6c9 0%,#258dc8 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #26a6c9 0%,#258dc8 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #26a6c9 0%,#258dc8 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #26a6c9 0%,#258dc8 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26a6c9', endColorstr='#258dc8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 .sidebar-nav {
   padding: 9px 0;
@@ -16,4 +32,61 @@ body {
 
 .show-grid div {
   background: #f1f1f1;
+}
+
+.stately {
+    width: 300px;     /* width and font size must match */
+    font-size: 300px; /*width and font size must match */
+    color: #f0f0f0;
+}
+
+path {
+  fill: #fff;
+  stroke:#999;
+  stroke-width:0.2;
+  .transition;
+  cursor: pointer;
+  &:hover{
+    fill: #000;
+  }
+}
+
+.mapcontainer {
+  margin: auto;
+  width: 1000px;
+  text-align: center;
+}
+
+[data-country="Egypt"] {
+    
+}
+
+.countrypopup {
+  .rounded(10px);
+  padding: 5px;
+  background: #f1f1f1;
+  border: 1px solid #333;
+  height: 300px;
+  width: 250px;
+  position: absolute;
+  top:200px;
+  bottom:0;
+  right: 0;
+  left:0;
+  margin:0 auto;
+  z-index: 1000;
+  display: none;
+}
+
+.transition(@property: all, @duration:0.2s, @ease:ease-out) {
+  -webkit-transition: @property @duration @ease;
+  -moz-transition: @property @duration @ease;
+  -o-transition: @property @duration @ease;
+  transition: @property @duration @ease;
+}
+
+.rounded(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
 }
