@@ -79,7 +79,7 @@ path {
 path:hover {
   fill: #333;
 }
-#africacontainer:hover .africa {
+.africacontainer.hover:hover .africa {
   fill: #333;
 }
 svg {
