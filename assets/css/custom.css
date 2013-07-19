@@ -67,21 +67,37 @@ path {
   cursor: pointer;
 }
 path:hover {
-  fill: #000;
+  fill: #333;
+}
+svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 .mapcontainer {
   margin: auto;
-  width: 1000px;
   text-align: center;
+  height: 800px;
+}
+[data-country="Egypt"]:after {
+  content: "Egypt";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: black;
 }
 .countrypopup {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  padding: 5px;
   background: #f1f1f1;
   border: 1px solid #333;
-  height: 300px;
+  height: 166px;
+  overflow: hidden;
   width: 250px;
   position: absolute;
   top: 200px;

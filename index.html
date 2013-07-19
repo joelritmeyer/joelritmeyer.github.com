@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="countrypopup egyptbox fadeInUpBig">
-      This is a box
+      <img src="http://stream1.gifsoup.com/view/973782/walk-like-an-egyptian-o.gif" width="300px"/>
       <p class="close">close</p>
     </div>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -44,8 +44,6 @@
             <!-- <p class="navbar-text pull-right">test</p> -->
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="styleguide.html">Style Guide</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -2748,7 +2746,7 @@
         $(".egyptbox").addClass("animated");
         $(".egyptbox").removeClass("fadeOutDownBig");
       });
-      $(".close").click(function() {
+      $(".egyptbox").click(function() {
         $(".egyptbox").removeClass("fadeInUpBig");
         $(".egyptbox").addClass("fadeOutDownBig");
       });
