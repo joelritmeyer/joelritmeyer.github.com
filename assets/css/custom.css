@@ -7,7 +7,6 @@ body {
 }
 body {
   padding-top: 40px;
-  padding-bottom: 40px;
   background: #26a6c9;
   /* Old browsers */
 
@@ -79,7 +78,7 @@ path {
 path:hover {
   fill: #333;
 }
-.africacontainer.hover:hover .africa {
+.hover .africacontainer:hover .africa {
   fill: #333;
 }
 svg {
@@ -96,13 +95,6 @@ svg {
   margin: auto;
   text-align: center;
   height: 800px;
-}
-[data-country="Egypt"]:after {
-  content: "Egypt";
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: black;
 }
 .countrypopup {
   -webkit-border-radius: 10px;

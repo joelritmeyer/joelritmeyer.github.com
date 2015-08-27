@@ -7,7 +7,6 @@ html, body {
 
 body {
   padding-top: 40px;
-  padding-bottom: 40px;
   background: #26a6c9; /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover,  #26a6c9 0%, #258dc8 100%); /* FF3.6+ */
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#26a6c9), color-stop(100%,#258dc8)); /* Chrome,Safari4+ */
@@ -55,12 +54,12 @@ path {
     display: none;
   }*/
 }
-
-
-.africacontainer.hover {
-  &:hover {
-    .africa {
-      fill: #333;
+.hover {
+  .africacontainer {
+    &:hover {
+      .africa {
+        fill: #333;
+      }
     }
   }
 }
@@ -83,13 +82,6 @@ svg {
 }
 
 [data-country="Egypt"] {
-    &:after {
-      content: "Egypt";
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background: black;
-    }
 }
 
 .countrypopup {
